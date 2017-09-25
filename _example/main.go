@@ -2,7 +2,6 @@ package main
 
 import (
 	"github.com/kataras/iris"
-	"github.com/kataras/iris/context"
 	"github.com/syklevin/iris-go-i18n/middleware/i18n"
 )
 
@@ -21,7 +20,7 @@ func main() {
 
 	app.Use(locale.Serve)
 
-	app.Get("/hi", func(ctx context.Context) {
+	app.Get("/hi", func(ctx iris.Context) {
 
 		// it tries to find the language by:
 		// ctx.Values().GetString("language")
