@@ -3,23 +3,11 @@ package main
 import (
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/context"
-	"github.com/kataras/iris/view"
 	"github.com/syklevin/iris-go-i18n/middleware/i18n"
 )
 
 type User struct {
 	Name string
-}
-
-func index(ctx context.Context) {
-
-	language := ctx.Values().GetString(ctx.Application().ConfigurationReadOnly().GetTranslateLanguageContextKey())
-	ctx.ViewData("Lang", language)
-	ctx.ViewData("Title", "Hi Page")
-	ctx.ViewData("User", &User{
-		Name: "Peter",
-	})
-	ctx.View("index.html")
 }
 
 func main() {
@@ -32,21 +20,6 @@ func main() {
 	locale.Bundle.MustLoadTranslationFile("./locales/zh-CN.all.yaml")
 
 	app.Use(locale.Serve)
-
-	tmpl := view.HTML("./templates", ".html")
-	tmpl.Reload(true)
-
-	tmpl.AddFunc("tr", func(lang string, msg string, args ...interface{}) string {
-		tr, err := locale.Bundle.Tfunc(lang, locale.Default)
-		if err != nil {
-			return msg
-		}
-		return tr(msg, args...)
-	})
-
-	app.RegisterView(tmpl)
-
-	app.Get("/", index)
 
 	app.Get("/hi", func(ctx context.Context) {
 

@@ -3,7 +3,7 @@ package i18n
 import (
 	"strings"
 
-	"github.com/kataras/iris/context"
+	"github.com/kataras/iris"
 	"github.com/nicksnyder/go-i18n/i18n/bundle"
 )
 
@@ -33,7 +33,7 @@ func Default() *I18n {
 }
 
 // Serve implemented iris handler
-func (i *I18n) Serve(ctx context.Context) {
+func (i *I18n) Serve(ctx iris.Context) {
 	wasByCookie := false
 
 	language := i.Default
