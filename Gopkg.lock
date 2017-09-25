@@ -2,30 +2,6 @@
 
 
 [[projects]]
-  name = "github.com/BurntSushi/toml"
-  packages = ["."]
-  revision = "b26d9c308763d68093482582cea63d69be07a0f0"
-  version = "v0.3.0"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/Joker/jade"
-  packages = ["."]
-  revision = "35b3f5bdbcc920cd31f4870536dbc63be8530541"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/aymerick/raymond"
-  packages = [".","ast","lexer","parser"]
-  revision = "72acac2207479d21dd45898c2a4264246c818148"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/eknkc/amber"
-  packages = [".","parser"]
-  revision = "b8bd8b03e4f747e33f092617225e9fa8076c0448"
-
-[[projects]]
   name = "github.com/fatih/structs"
   packages = ["."]
   revision = "a720dfa8df582c51dee1b36feabb906bde1588bd"
@@ -33,13 +9,7 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/flosch/pongo2"
-  packages = ["."]
-  revision = "1f4be1efe3b3529b7e58861f75d70120a9567dc4"
-
-[[projects]]
-  branch = "master"
-  name = "github.com/iris-contrib/form-binder"
+  name = "github.com/iris-contrib/formBinder"
   packages = ["."]
   revision = "ed52a69d2bfbe92c9e8c5a35cad28da183ededdc"
 
@@ -51,21 +21,15 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/juju/errors"
-  packages = ["."]
-  revision = "c7d06af17c68cd34c835053720b21f6549d9b0ee"
-
-[[projects]]
-  branch = "master"
   name = "github.com/kataras/golog"
   packages = ["."]
   revision = "2ed680e7b1f34147164fa8073373e14fce02ac30"
 
 [[projects]]
   name = "github.com/kataras/iris"
-  packages = [".","cache","cache/cfg","cache/client","cache/client/rule","cache/entry","cache/ruleset","cache/uri","context","core/errors","core/handlerconv","core/host","core/memstore","core/netutil","core/router","core/router/macro","core/router/macro/interpreter/ast","core/router/macro/interpreter/lexer","core/router/macro/interpreter/parser","core/router/macro/interpreter/token","core/router/node","middleware/logger","middleware/recover","mvc","mvc/activator","mvc/activator/field","mvc/activator/methodfunc","mvc/activator/model","mvc/activator/persistence","sessions","view"]
-  revision = "5e0fb95f46bab5382836fafce8a79cb322ed5a46"
-  version = "v8.4.0"
+  packages = ["context","core/errors","core/memstore"]
+  revision = "62b0f781ff87dcac587171a36f923619f4b1eb2d"
+  version = "v8.4.2"
 
 [[projects]]
   branch = "master"
@@ -100,8 +64,8 @@
 [[projects]]
   name = "github.com/nicksnyder/go-i18n"
   packages = ["i18n/bundle","i18n/language","i18n/translation"]
-  revision = "3e70a1a463008cea6726380c908b1a6a8bdf7b24"
-  version = "v1.8.1"
+  revision = "ca33e78c8a430e2df435b02f63a3944fa8e9ea11"
+  version = "v1.9.0"
 
 [[projects]]
   name = "github.com/pelletier/go-buffruneio"
@@ -123,12 +87,6 @@
 
 [[projects]]
   branch = "master"
-  name = "github.com/ryanuber/columnize"
-  packages = ["."]
-  revision = "abc90934186a77966e2beeac62ed966aac0561d5"
-
-[[projects]]
-  branch = "master"
   name = "github.com/satori/go.uuid"
   packages = ["."]
   revision = "5bf94b69c6b68ee1b541973bb8e1144db23a194b"
@@ -138,12 +96,6 @@
   name = "github.com/shurcooL/sanitized_anchor_name"
   packages = ["."]
   revision = "541ff5ee47f1dddf6a5281af78307d921524bcb5"
-
-[[projects]]
-  branch = "master"
-  name = "golang.org/x/crypto"
-  packages = ["acme","acme/autocert"]
-  revision = "faadfbdc035307d901e69eea569f5dda451a3ee3"
 
 [[projects]]
   branch = "master"
@@ -166,6 +118,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "52fffe31775981bba5e5236a7d4ee6710d84c35d5712035c5f0f536b1240197f"
+  inputs-digest = "792b39cc04a2d333fd99655a3ed9317e7a3a23eaba1af6f4a5f1c892b64538fa"
   solver-name = "gps-cdcl"
   solver-version = 1

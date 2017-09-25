@@ -23,8 +23,8 @@
 
 [[constraint]]
   name = "github.com/kataras/iris"
-  version = "8.4.0"
+  version = "8.4.2"
 
 [[constraint]]
   name = "github.com/nicksnyder/go-i18n"
-  branch = "master"
+  version = "1.9.0"
